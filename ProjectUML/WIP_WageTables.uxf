@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<diagram program="umlet" version="14.2">
+<diagram program="umlet" version="14.3.0">
   <zoom_level>10</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>700</x>
-      <y>170</y>
+      <x>520</x>
+      <y>420</y>
       <w>220</w>
       <h>60</h>
     </coordinates>
     <panel_attributes>/IWageTable/
 --
-/+ mapItem (Object) : BigDecimal/
+/+ mapItem (Object) : Double/
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>280</x>
-      <y>360</y>
+      <x>100</x>
+      <y>610</y>
       <w>150</w>
       <h>60</h>
     </coordinates>
@@ -30,8 +30,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>460</x>
-      <y>360</y>
+      <x>280</x>
+      <y>610</y>
       <w>160</w>
       <h>60</h>
     </coordinates>
@@ -42,8 +42,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>640</x>
-      <y>360</y>
+      <x>460</x>
+      <y>610</y>
       <w>150</w>
       <h>60</h>
     </coordinates>
@@ -54,8 +54,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>870</x>
-      <y>360</y>
+      <x>690</x>
+      <y>610</y>
       <w>160</w>
       <h>60</h>
     </coordinates>
@@ -66,8 +66,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1050</x>
-      <y>360</y>
+      <x>870</x>
+      <y>610</y>
       <w>140</w>
       <h>60</h>
     </coordinates>
@@ -78,8 +78,8 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>810</x>
-      <y>220</y>
+      <x>630</x>
+      <y>470</y>
       <w>30</w>
       <h>110</h>
     </coordinates>
@@ -89,8 +89,19 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>340</x>
-      <y>300</y>
+      <x>160</x>
+      <y>550</y>
+      <w>30</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>350</x>
+      <y>550</y>
       <w>30</w>
       <h>80</h>
     </coordinates>
@@ -101,7 +112,7 @@
     <id>Relation</id>
     <coordinates>
       <x>530</x>
-      <y>300</y>
+      <y>550</y>
       <w>30</w>
       <h>80</h>
     </coordinates>
@@ -111,8 +122,8 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>710</x>
-      <y>300</y>
+      <x>760</x>
+      <y>550</y>
       <w>30</w>
       <h>80</h>
     </coordinates>
@@ -122,8 +133,8 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>940</x>
-      <y>300</y>
+      <x>930</x>
+      <y>550</y>
       <w>30</w>
       <h>80</h>
     </coordinates>
@@ -133,19 +144,8 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1110</x>
-      <y>300</y>
-      <w>30</w>
-      <h>80</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>340</x>
-      <y>290</y>
+      <x>160</x>
+      <y>540</y>
       <w>970</w>
       <h>40</h>
     </coordinates>
@@ -155,8 +155,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1210</x>
-      <y>360</y>
+      <x>1030</x>
+      <y>610</y>
       <w>160</w>
       <h>60</h>
     </coordinates>
@@ -167,12 +167,38 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1280</x>
-      <y>300</y>
+      <x>1100</x>
+      <y>550</y>
       <w>30</w>
       <h>80</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>940</x>
+      <y>170</y>
+      <w>350</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Singleton&gt;&gt;
+WageTableHandler
+--
++ WAGE_TABLE_NAMES : Final Str Array
++ DEFAULT_WT_TYPE : Type
+
+- WageTables : HashMap&lt;String, IWageTable&gt;
+--
++ CreateWageTabels () : void
++ WriteWageTables () : void
+
+// Grab some configuration values
++ CreateCustomWageTables () : void
++ WriteCustomWageTables () : void
+
++ ModifiedTables () : List&lt;TableName&gt;</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>
