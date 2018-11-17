@@ -1,0 +1,11 @@
+CraftyProfessions
+	- build.gradle
+	- settings.gradle
+	- plugin.yml
+	- config.yml
+	+ common/ (subproject)
+		+ src
+	+ spigot/ (subproject)
+		+ src
+	+ sponge/ (subproject)
+		+ src

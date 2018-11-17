@@ -1,0 +1,29 @@
+To Do List:
+
+Remove the Wage Table References from the Database. These should be dynamically changeable.\
+
+
+What does the DAO's need to retrieve and save from the database?
+
+
+User DAO - What can be recalculated compared to stored?
+	Loading
+	- SELECT * FROM Users WHERE UUID = ?
+		- Player ID (Primary Key)
+		- UUID (Initial Query onLoad())
+		- Current Username (If Current Name != Username then Update Username)
+		- UserLevel (Overall Level of the User)
+		- Date of Creation
+
+
+	Saving
+	-
+
+Professions DAO
+	Loading
+	- 
+
+	Saving
+	- 
+
+Augments DAO
