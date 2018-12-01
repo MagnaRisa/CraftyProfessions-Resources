@@ -88,6 +88,13 @@ INSERT INTO UserProfHasAugments (UserID, ProfessionID, AugmentID) VALUES (2, 6, 
 INSERT INTO UserProfHasAugments (UserID, ProfessionID, AugmentID) VALUES (2, 6, 3);
 INSERT INTO UserProfHasAugments (UserID, ProfessionID, AugmentID) VALUES (2, 1, 13);
 
+INSERT INTO UserSideJobHasAugments (UserID, SubProfessionID, AugmentID) VALUES (1, 1, 1);
+INSERT INTO UserSideJobHasAugments (UserID, SubProfessionID, AugmentID) VALUES (2, 1, 5);
+INSERT INTO UserSideJobHasAugments (UserID, SubProfessionID, AugmentID) VALUES (3, 3, 12);
+INSERT INTO UserSideJobHasAugments (UserID, SubProfessionID, AugmentID) VALUES (1, 1, 6);
+INSERT INTO UserSideJobHasAugments (UserID, SubProfessionID, AugmentID) VALUES (2, 1, 12);
+INSERT INTO UserSideJobHasAugments (UserID, SubProfessionID, AugmentID) VALUES (2, 1, 9);
+
 
 
 

@@ -19,7 +19,20 @@ WHERE Users.UserID = :userID
 AND Users.UserID = SideJobs.UserID
 AND SubProfessions.SubProfessionID = SideJobs.SubProfessionID;
 
--- Testing selectLevelInfo
-SELECT *
-FROM Levels
-WHERE LevelID = :levelID;
+-- Select a (User, Profession) pair's augments.
+-- I Might need to return more info here, but for now this will work.
+SELECT Careers.UserID, AugmentID, Careers.ProfessionID
+FROM Careers, UserProfHasAugments
+WHERE Careers.UserID = :userID
+AND UserProfHasAugments.ProfessionID = :profID
+AND Careers.UserID = UserProfHasAugments.UserID 
+AND Careers.ProfessionID = UserProfHasAugments.ProfessionID;
+
+-- Select a (User, SubProfession) pair's augments
+-- I Might need to return more info here, but for now this will work.
+SELECT SideJobs.UserID, AugmentID, SideJobs.SubProfessionID
+FROM SideJobs, UserSideJobHasAugments 
+WHERE SideJobs.UserID = :userID
+AND UserSideJobHasAugments.SubProfessionID = :subProfID 
+AND SideJobs.UserID = UserSideJobHasAugments.UserID 
+AND SideJobs.SubProfessionID = UserSideJobHasAugments.SubProfessionID
