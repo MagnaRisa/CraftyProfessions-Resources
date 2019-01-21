@@ -35,4 +35,7 @@ FROM SideJobs, UserSideJobHasAugments
 WHERE SideJobs.UserID = :userID
 AND UserSideJobHasAugments.SubProfessionID = :subProfID 
 AND SideJobs.UserID = UserSideJobHasAugments.UserID 
-AND SideJobs.SubProfessionID = UserSideJobHasAugments.SubProfessionID
+AND SideJobs.SubProfessionID = UserSideJobHasAugments.SubProfessionID;
+
+select ProfessionID from Professions;
+
